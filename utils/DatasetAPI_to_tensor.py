@@ -18,7 +18,7 @@ def data_iterator(split, feat_source, batch_size):
     my_data = json.load(open('data/quality.json'))[split]
     tshape = (10, 10, 2048) if feat_source == 'detectron' else (14, 14, 2048)
     ds_feat = tf.data.Dataset.from_tensor_slices(my_data['image'])
-    ds_feat = ds_feat.map(lambda item: tf.py_func(partial(read_npy_file, split, feat_source, tshape), [item], tf.float32))
+    ds_feat = ds_feat.map(lambda item: tf.py_function(partial(read_npy_file, split, feat_source, tshape), [item], tf.float32))
     ds_feat = ds_feat.map(partial(set_feat_shape, tshape))
     ds_rec = tf.data.Dataset.from_tensor_slices(my_data['recognizable'])
     ds = tf.data.Dataset.zip((ds_feat, ds_rec))    
