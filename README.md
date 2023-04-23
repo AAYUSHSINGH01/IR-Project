@@ -1,3 +1,8 @@
+Abstract:
+This research paper addresses the challenge of determining the recognizability of blurry images, which is critical for visually impaired individuals who rely on computer vision systems. To tackle this problem, we propose a threshold-based approach that can accurately determine the recognizability of blurry images. The proposed method is evaluated using a comprehensive dataset of blurry images, and its performance is compared to existing methods. The novelty of our approach lies in the fact that blurry images are inherently more difficult to analyse and interpret, and we demonstrate the effectiveness of our method through experimental results. Our methodology includes data collection, pre-processing, and feature extraction, which are critical steps in visual questions and answering blur images. Ultimately, the outcome of this work is the definition of a threshold for blurred images, which can have significant implications for various applications, including medical diagnosis, security systems, and autonomous vehicles, as well as improving the quality of life for visually impaired individuals.
+
+
+
 # VizWiz-QualityIssues
 Code for the [VizWiz Image Quality Issues Dataset](https://vizwiz.org/tasks-and-datasets/image-quality-issues/), including API, baseline models and evaluation method.
 
@@ -8,7 +13,7 @@ Code for the [VizWiz Image Quality Issues Dataset](https://vizwiz.org/tasks-and-
 ## Files ##
 ```./```
 - ```demo_recognizability.ipynb```: demo of recognizability prediction using Detectron or Resnet152 feature maps and its evaluation.
-- ```demo_answerability_recognizability.ipynb```: demo of joint prediction of answerability and recognizability using Detectron or Resnet152 feature maps and its evaluation.
+- ```demo_answerability_recognizability.ipynb```: demo of joint prediction of answerability and recognizability using Detectron or Resnet152 feature maps and its evaluation
 
 ```./api```
 - ```load_annotations.ipynb```: 
@@ -87,3 +92,5 @@ The format shown below is (avg. precision of **unanswerability** / avg. precisio
 - [VizWiz Project](http://vizwiz.org)
 - [Detectron](https://github.com/facebookresearch/detectron2)
 - [Bottom-Up and Top-Down Attention for Image Captioning and Visual Question Answering](https://arxiv.org/abs/1707.07998)
+- NASNetLarge : https://arxiv.org/abs/1707.07012
+- Xception: https://arxiv.org/abs/1610.02357
